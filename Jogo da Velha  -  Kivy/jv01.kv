@@ -1,0 +1,315 @@
+<Telas>:
+    Inicio:
+        name: 'tela_inicio'
+    Modo_jogo_01:
+        name: 'tela_jogo_01'
+    Modo_jogo_02:
+        name: 'tela_jogo_02'
+
+<Inicio>:
+    name: 'inicio'
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 15
+        spacing: 15
+
+        BoxLayout:
+            orientation: 'vertical'
+            padding: 15
+            spacing: 10
+            size_hint_y: 1.5
+
+            Label:
+                id: titulo
+                font_size: 40
+                text_size: self.size
+                halign: 'center'
+                valign: 'center'
+                text: 'JOGO DA VELHA'
+
+        BoxLayout:
+            orientation: 'vertical'
+            padding: 15
+            spacing: 10
+            size_hint_y: 3
+
+            Button:
+                font_size: 25
+                size_hint_y: 0.2
+                text: 'Jogar contra CPU:'
+                on_release: app.root.current = 'tela_jogo_01'
+
+            Button:
+                font_size: 25
+                size_hint_y: 0.2
+                text: 'Jogar de dois Jogadores:'
+                on_release: app.root.current = 'tela_jogo_02'
+
+<Modo_jogo_01>:
+    on_enter: root.start()
+    name: 'jogo_01'
+    on_enter:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 15
+        spacing: 15
+
+        BoxLayout:
+            orientation: 'vertical'
+            padding: 15
+            spacing: 10
+            size_hint_y: 0.2
+
+            Label:
+                id: titulo
+                font_size: 45
+                text_size: self.size
+                halign: 'center'
+                valign: 'center'
+                text: 'JOGO DA VELHA'
+
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 15
+            spacing: 10
+            size_hint_y: 0.2
+
+            Label:
+                id: pontos_j1
+                font_size: 20
+                text_size: self.size
+                halign: 'center'
+                valign: 'center'
+
+            Label:
+                id: pontos_j2
+                font_size: 20
+                text_size: self.size
+                halign: 'center'
+                valign: 'center'
+            Label:
+                id: pontos_e0
+                font_size: 20
+                text_size: self.size
+                halign: 'center'
+                valign: 'center'
+
+        BoxLayout:
+            spacing: 10
+            size_hint_y: 0.1
+            Label:
+                id: vez
+                font_size: 20
+                text_size: self.size
+                halign: 'center'
+                valign: 'center'
+
+        BoxLayout:
+            orientation: 'vertical'
+            padding: 15
+            spacing: 10
+            size_hint_y: 1
+
+            BoxLayout:
+                orientation: 'horizontal'
+                spacing: 10
+                size_hint_y: 10
+
+                Button:
+                    id: aa
+                    size_hint_y: 0.4
+                    font_size: 50
+                    text:
+                    on_release: root.clicar(id='aa')
+
+                Button:
+                    id: ab
+                    size_hint_y: 0.4
+                    font_size: 50
+                    text:
+                    on_release: root.clicar(id='ab')
+                Button:
+                    id: ac
+                    size_hint_y: 0.4
+                    font_size: 50
+                    text:
+                    on_release: root.clicar(id='ac')
+            BoxLayout:
+                orientation: 'horizontal'
+                spacing: 10
+                size_hint_y: 10
+                Button:
+                    id: ba
+                    size_hint_y: 0.4
+                    font_size: 50
+                    text:
+                    on_release: root.clicar(id='ba')
+                Button:
+                    id: bb
+                    size_hint_y: 0.4
+                    font_size: 50
+                    text:
+                    on_release: root.clicar(id='bb')
+                Button:
+                    id: bc
+                    size_hint_y: 0.4
+                    font_size: 50
+                    text:
+                    on_release: root.clicar(id='bc')
+            BoxLayout:
+                orientation: 'horizontal'
+                spacing: 10
+                size_hint_y: 10
+                Button:
+                    id: ca
+                    size_hint_y: 0.4
+                    font_size: 50
+                    text:
+                    on_release: root.clicar(id='ca')
+                Button:
+                    id: cb
+                    size_hint_y: 0.4
+                    font_size: 50
+                    text:
+                    on_release: root.clicar(id='cb')
+                Button:
+                    id: cc
+                    size_hint_y: 0.4
+                    font_size: 50
+                    text:
+                    on_release: root.clicar(id='cc')
+
+
+<Modo_jogo_02>:
+    on_enter: root.start()
+    name: 'jogo_02'
+    on_enter:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 15
+        spacing: 15
+
+        BoxLayout:
+            orientation: 'vertical'
+            padding: 15
+            spacing: 10
+            size_hint_y: 0.2
+
+            Label:
+                id: titulo
+                font_size: 45
+                text_size: self.size
+                halign: 'center'
+                valign: 'center'
+                text: 'JOGO DA VELHA'
+
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 15
+            spacing: 10
+            size_hint_y: 0.2
+
+            Label:
+                id: pontos_j1
+                font_size: 20
+                text_size: self.size
+                halign: 'center'
+                valign: 'center'
+
+            Label:
+                id: pontos_j2
+                font_size: 20
+                text_size: self.size
+                halign: 'center'
+                valign: 'center'
+            Label:
+                id: pontos_e0
+                font_size: 20
+                text_size: self.size
+                halign: 'center'
+                valign: 'center'
+
+        BoxLayout:
+            spacing: 10
+            size_hint_y: 0.1
+            Label:
+                id: vez
+                font_size: 20
+                text_size: self.size
+                halign: 'center'
+                valign: 'center'
+
+        BoxLayout:
+            orientation: 'vertical'
+            padding: 15
+            spacing: 10
+            size_hint_y: 1
+
+            BoxLayout:
+                orientation: 'horizontal'
+                spacing: 10
+                size_hint_y: 10
+
+                Button:
+                    id: aa
+                    size_hint_y: 0.4
+                    font_size: 50
+                    text:
+                    on_release: root.clicar(id='aa')
+
+                Button:
+                    id: ab
+                    size_hint_y: 0.4
+                    font_size: 50
+                    text:
+                    on_release: root.clicar(id='ab')
+                Button:
+                    id: ac
+                    size_hint_y: 0.4
+                    font_size: 50
+                    text:
+                    on_release: root.clicar(id='ac')
+            BoxLayout:
+                orientation: 'horizontal'
+                spacing: 10
+                size_hint_y: 10
+                Button:
+                    id: ba
+                    size_hint_y: 0.4
+                    font_size: 50
+                    text:
+                    on_release: root.clicar(id='ba')
+                Button:
+                    id: bb
+                    size_hint_y: 0.4
+                    font_size: 50
+                    text:
+                    on_release: root.clicar(id='bb')
+                Button:
+                    id: bc
+                    size_hint_y: 0.4
+                    font_size: 50
+                    text:
+                    on_release: root.clicar(id='bc')
+            BoxLayout:
+                orientation: 'horizontal'
+                spacing: 10
+                size_hint_y: 10
+                Button:
+                    id: ca
+                    size_hint_y: 0.4
+                    font_size: 50
+                    text:
+                    on_release: root.clicar(id='ca')
+                Button:
+                    id: cb
+                    size_hint_y: 0.4
+                    font_size: 50
+                    text:
+                    on_release: root.clicar(id='cb')
+                Button:
+                    id: cc
+                    size_hint_y: 0.4
+                    font_size: 50
+                    text:
+                    on_release: root.clicar(id='cc')
